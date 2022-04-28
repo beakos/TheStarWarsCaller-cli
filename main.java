@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class StarWarsMovieDetails {
+public class main {
     public static void main (String[] args) {
         Scanner keyboard = new Scanner(System.in);
         System.out.print("Show Episode Information:(Choose 0 to list all. Choose 1 - 11 to list episode name): ");
