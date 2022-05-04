@@ -1,11 +1,8 @@
-import java.util.Scanner;
-
 public class shows {
-    public static void main (String[] args) {
-        
-        
+    String title;
+    int year;
+}        
 
-        
         /* Scanner keyboard = new Scanner(System.in);
         System.out.print("Show TV Show Information: (Choose 0 for all or number 1-3): ");
 
@@ -55,13 +52,3 @@ public class shows {
         } else if (tv == 3) {
             System.out.println(show3);
         }    */ 
-    }
-}
-
-
-
-
-        
-
-
-       

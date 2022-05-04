@@ -66,14 +66,18 @@ public class main {
 
         stories solo = new stories();
         solo.movieName = "Solo: ";
-        solo.title = "A Star Wars Stroy";
+        solo.title = "A Star Wars Story";
         solo.year = 2018;
         solo.information = "Lorum Ipsum";
 
         /* Star War's TV Shows related to the Star Wars Franchise. */
+        shows mandalorian = new shows();
+        mandalorian.title = "The Mandalorian";
 
         /* Star War's Games related to the Star Wars Franchise */
-
+        games battlefront = new games();
+        battlefront.title = "Battlefront";
+        battlefront.year = 2003;
 
         //Scanner keyboard = new Scanner(System.in);
 
