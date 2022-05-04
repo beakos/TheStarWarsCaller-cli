@@ -1,9 +1,79 @@
 import java.util.Scanner;
-
 public class main {
     public static void main (String[] args) {
+        episode one = new episode();
+        one.movieName = "Star Wars";
+        one.episode = 1;
+        one.title = "The Phantom Menace";
+        one.year = 1999;
+        one.information = "Jedi master with apprentice Obi One Konobi, find this kid named Anakin blah blah and fight boss at the end....";
+
+        episode two = new episode();
+        two.movieName = "Star Wars";
+        two.episode = 2;
+        two.title = "Attack of the Clones";
+        two.year = 2002;
+        two.information = "Anakin grows up and is trained by his master Obi Won";
+
+        episode three = new episode();
+        three.movieName = "Star Wars";
+        three.episode = 3;
+        three.title = "Revenge of the Sith";
+        three.year = 2005;
+        three.information = "Anakin becomes Vader";
+        three.raiting = 9.5;
+
+        episode four = new episode();
+        four.movieName = "Star Wars";
+        four.episode = 4;
+        four.title = "A New Hope";
+        four.year = 1977;
+        four.information = "Darth Vader makes an apperance after suffering";
+        four.raiting = 8.0;
+
+        episode five = new episode();
+        five.movieName = "Star Wars";
+        five.episode = 5;
+        five.title = "The Empire Strikes Back";
+        five.year = 1980;
+        five.information = "Lorum Ipsum";
+        five.raiting = 9.0;
+
+        episode six = new episode();
+        six.movieName = "Star Wars";
+        six.episode = 6;
+        six.title = "Return of the Jedi";
+        six.year = 1983;
+        six.information = "Lorum Ipsum..";
+
+        episode seven = new episode();
+        seven.movieName = "Star Wars";
+        seven.episode = 7;
+        seven.title = "The Force Awakens";
+        seven.year = 2015;
+        seven.information = "Lorum Ipsum";
+
+
+        movies rouge = new movies();
+        rouge.movieName = "Rouge One: ";
+        rouge.title = "A Star Wars Story";
+        rouge.year = 2016;
+        rouge.information = "Lorum Ipsum..";
+
+        movies solo = new movies();
+        solo.movieName = "Solo: ";
+        solo.title = "A Star Wars Stroy";
+        solo.year = 2018;
+        solo.information = "Lorum Ipsum";
+
+
         Scanner keyboard = new Scanner(System.in);
+
+
+        /* Scanner keyboard = new Scanner(System.in);
         System.out.print("Show Episode Information:(Choose 0 to list all. Choose 1 - 11 to list episode name): ");
+
+        //identify all classes here
 
         int mov = keyboard.nextInt(); // Movies
         String ep1 = "Star Wars: Episode I - The Phantom Menace (1999)";
@@ -95,7 +165,7 @@ public class main {
             System.out.println(" ");
             
             System.out.println("Film Eleven: " + ep11);
-        }
+        } */
 
     }
 }

@@ -1,8 +1,12 @@
 import java.util.Scanner;
 
-public class StarWarsTvShowDetails {
+public class shows {
     public static void main (String[] args) {
-        Scanner keyboard = new Scanner(System.in);
+        
+        
+
+        
+        /* Scanner keyboard = new Scanner(System.in);
         System.out.print("Show TV Show Information: (Choose 0 for all or number 1-3): ");
 
         int tv = keyboard.nextInt(); // TV Shows
@@ -50,7 +54,7 @@ public class StarWarsTvShowDetails {
         
         } else if (tv == 3) {
             System.out.println(show3);
-        }     
+        }    */ 
     }
 }
 
