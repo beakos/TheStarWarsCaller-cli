@@ -1,6 +1,5 @@
-public class episode {
+public class stories {
     String movieName; // always star wars unless otherwise
-    int episode; // episode number
     String title;
     int year; // year of the film
     String information;

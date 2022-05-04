@@ -1,6 +1,8 @@
 import java.util.Scanner;
 public class main {
     public static void main (String[] args) {
+        
+        /* Star War films part of the main storyline. */
         episode one = new episode();
         one.movieName = "Star Wars";
         one.episode = 1;
@@ -53,21 +55,27 @@ public class main {
         seven.year = 2015;
         seven.information = "Lorum Ipsum";
 
+        /* Insert Episode Details 8 and 9 here --- remove this comment when ommitted!! */
 
-        movies rouge = new movies();
+        /* Star War's Movies not part of the main storyline aka stories. */
+        stories rouge = new stories();
         rouge.movieName = "Rouge One: ";
         rouge.title = "A Star Wars Story";
         rouge.year = 2016;
         rouge.information = "Lorum Ipsum..";
 
-        movies solo = new movies();
+        stories solo = new stories();
         solo.movieName = "Solo: ";
         solo.title = "A Star Wars Stroy";
         solo.year = 2018;
         solo.information = "Lorum Ipsum";
 
+        /* Star War's TV Shows related to the Star Wars Franchise. */
 
-        Scanner keyboard = new Scanner(System.in);
+        /* Star War's Games related to the Star Wars Franchise */
+
+
+        //Scanner keyboard = new Scanner(System.in);
 
 
         /* Scanner keyboard = new Scanner(System.in);
