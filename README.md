@@ -2,7 +2,7 @@
 Star Wars command line based program written purely in Java that gives the user information about media releases of Star Wars such as films, tv shows, games etc.
 
 # Why does this project exist
-So I can learn Java, and show some intrest in Star Wars.
+So I can learn Java, and enjoy Star Wars.
 
 ## Brief Goals List
 ### Short Term 
