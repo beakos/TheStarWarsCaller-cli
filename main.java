@@ -79,6 +79,11 @@ public class main {
         battlefront.title = "Battlefront";
         battlefront.year = 2003;
 
+        games legoStarWarsTCS = new games();
+        legoStarWarsTCS.title = "Lego Star Wars, The Complete Saga";
+        legoStarWarsTCS.year = 2007;
+        legoStarWarsTCS.platform = "PC, Playstation 3, Xbox 360";
+
         //Scanner keyboard = new Scanner(System.in);
 
 
