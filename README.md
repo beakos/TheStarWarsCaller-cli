@@ -22,3 +22,8 @@ So I can learn Java, and enjoy Star Wars.
 # Downloading and Running
 - Program is not in ready state yet;
 - Clone the repo, complie it when it has no errors and you are good to go.
+
+# Legal & Terms
+- This project is a non-profit
+- Do not take offence to information
+- Information contained in the programs may contain spoiler, be aware!

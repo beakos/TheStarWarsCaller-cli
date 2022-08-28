@@ -1,3 +1,4 @@
+/* (4) Star Wars Movie Stories */
 public class stories {
     String movieName; // always star wars unless otherwise
     String title;

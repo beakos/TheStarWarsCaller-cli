@@ -2,40 +2,45 @@ import java.util.Scanner;
 public class main {
     public static void main (String[] args) {
         
-        /* Star War films part of the main storyline. */
+        /* Star Wars Main Stream Story Line (1) */
         episode one = new episode();
         one.movieName = "Star Wars";
         one.episode = 1;
+        one.roman = "I";
         one.title = "The Phantom Menace";
         one.year = 1999;
-        one.information = "Jedi master with apprentice Obi One Konobi, find this kid named Anakin blah blah and fight boss at the end....";
+        one.information = "Lorum Ipsum";
 
         episode two = new episode();
         two.movieName = "Star Wars";
         two.episode = 2;
+        two.roman = "II";
         two.title = "Attack of the Clones";
         two.year = 2002;
-        two.information = "Anakin grows up and is trained by his master Obi Won";
+        two.information = "Lorum Ipsum";
 
         episode three = new episode();
         three.movieName = "Star Wars";
         three.episode = 3;
+        three.roman = "III";
         three.title = "Revenge of the Sith";
         three.year = 2005;
-        three.information = "Anakin becomes Vader";
+        three.information = "Lorum Ipsum";
         three.raiting = 9.5;
 
         episode four = new episode();
         four.movieName = "Star Wars";
         four.episode = 4;
+        four.roman = "IV";
         four.title = "A New Hope";
         four.year = 1977;
-        four.information = "Darth Vader makes an apperance after suffering";
+        four.information = "Lorum Ipsum";
         four.raiting = 8.0;
 
         episode five = new episode();
         five.movieName = "Star Wars";
         five.episode = 5;
+        five.roman = "V";
         five.title = "The Empire Strikes Back";
         five.year = 1980;
         five.information = "Lorum Ipsum";
@@ -44,6 +49,7 @@ public class main {
         episode six = new episode();
         six.movieName = "Star Wars";
         six.episode = 6;
+        six.roman = "VI";
         six.title = "Return of the Jedi";
         six.year = 1983;
         six.information = "Lorum Ipsum..";
@@ -51,13 +57,42 @@ public class main {
         episode seven = new episode();
         seven.movieName = "Star Wars";
         seven.episode = 7;
+        seven.roman = "VII";
         seven.title = "The Force Awakens";
         seven.year = 2015;
         seven.information = "Lorum Ipsum";
 
-        /* Insert Episode Details 8 and 9 here --- remove this comment when ommitted!! */
+       episode eight = new episode();
+       eight.movieName = "Star Wars";
+       eight.episode = 8;
+       eight.roman = "VIII";
+       eight.title = "The Last Jedi";
+       eight.year = 2017;
+       eight.information = "Lorum Ipsum";
 
-        /* Star War's Movies not part of the main storyline aka stories. */
+       episode nine = new episode();
+       nine.movieName = "Star Wars";
+       nine.episode = 9;
+       nine.roman = "XI";
+       nine.title = "The Rise of Skywalker";
+       nine.year = 2019;
+       nine.information = "Lorum Ipsum";
+
+        /* Star Wars Liscenced Games (2) */
+        games battlefront = new games();
+        battlefront.title = "Battlefront";
+        battlefront.year = 2003;
+
+        games legoStarWarsTCS = new games();
+        legoStarWarsTCS.title = "Lego Star Wars, The Complete Saga";
+        legoStarWarsTCS.year = 2007;
+        legoStarWarsTCS.platform = "PC, Playstation 3, Xbox 360";
+
+        /* Star Wars TV Shows (3) */
+        shows mandalorian = new shows();
+        mandalorian.title = "The Mandalorian";
+
+        /* Star Wars Movie Stories */
         stories rouge = new stories();
         rouge.movieName = "Rouge One: ";
         rouge.title = "A Star Wars Story";
@@ -69,22 +104,10 @@ public class main {
         solo.title = "A Star Wars Story";
         solo.year = 2018;
         solo.information = "Lorum Ipsum";
+    }
+}
 
-        /* Star War's TV Shows related to the Star Wars Franchise. */
-        shows mandalorian = new shows();
-        mandalorian.title = "The Mandalorian";
-
-        /* Star War's Games related to the Star Wars Franchise */
-        games battlefront = new games();
-        battlefront.title = "Battlefront";
-        battlefront.year = 2003;
-
-        games legoStarWarsTCS = new games();
-        legoStarWarsTCS.title = "Lego Star Wars, The Complete Saga";
-        legoStarWarsTCS.year = 2007;
-        legoStarWarsTCS.platform = "PC, Playstation 3, Xbox 360";
-
-        //Scanner keyboard = new Scanner(System.in);
+ //Scanner keyboard = new Scanner(System.in);
 
 
         /* Scanner keyboard = new Scanner(System.in);
@@ -183,6 +206,3 @@ public class main {
             
             System.out.println("Film Eleven: " + ep11);
         } */
-
-    }
-}
