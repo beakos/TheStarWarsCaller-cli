@@ -1,0 +1,6 @@
+{
+  "dataDir": "data",
+  "moviesFile": "movies.json",
+  "seriesFile": "series.json",
+  "preferencesFile": "user-preferences.json"
+}

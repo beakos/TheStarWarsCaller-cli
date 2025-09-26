@@ -1,0 +1,184 @@
+{
+  "movies": [
+    {
+      "title": "Star Wars: Episode I - The Phantom Menace",
+      "episodeNumber": 1,
+      "episodeRoman": "I",
+      "releaseYear": 1999,
+      "category": "SAGA",
+      "era": "Fall of the Republic",
+      "synopsis": "Jedi Knights Qui-Gon Jinn and Obi-Wan Kenobi discover Anakin Skywalker while the Sith return.",
+      "streaming": "Disney+",
+      "notes": "Director: George Lucas."
+    },
+    {
+      "title": "Star Wars: Episode II - Attack of the Clones",
+      "episodeNumber": 2,
+      "episodeRoman": "II",
+      "releaseYear": 2002,
+      "category": "SAGA",
+      "era": "Fall of the Republic",
+      "synopsis": "Anakin Skywalker reunites with Padme Amidala as Obi-Wan investigates the clone army and the Separatist threat.",
+      "streaming": "Disney+",
+      "notes": "Director: George Lucas."
+    },
+    {
+      "title": "Star Wars: Episode III - Revenge of the Sith",
+      "episodeNumber": 3,
+      "episodeRoman": "III",
+      "releaseYear": 2005,
+      "category": "SAGA",
+      "era": "Rise of the Empire",
+      "synopsis": "The Clone Wars end, Anakin Skywalker falls to the dark side, and Darth Sidious declares the Galactic Empire.",
+      "streaming": "Disney+",
+      "notes": "Director: George Lucas."
+    },
+    {
+      "title": "Star Wars: Episode IV - A New Hope",
+      "episodeNumber": 4,
+      "episodeRoman": "IV",
+      "releaseYear": 1977,
+      "category": "SAGA",
+      "era": "Galactic Civil War",
+      "synopsis": "Luke Skywalker joins the Rebel Alliance to destroy the Death Star.",
+      "streaming": "Disney+",
+      "notes": "Director: George Lucas."
+    },
+    {
+      "title": "Star Wars: Episode V - The Empire Strikes Back",
+      "episodeNumber": 5,
+      "episodeRoman": "V",
+      "releaseYear": 1980,
+      "category": "SAGA",
+      "era": "Galactic Civil War",
+      "synopsis": "The Empire scatters the Rebels while Luke trains with Yoda and confronts Darth Vader.",
+      "streaming": "Disney+",
+      "notes": "Director: Irvin Kershner."
+    },
+    {
+      "title": "Star Wars: Episode VI - Return of the Jedi",
+      "episodeNumber": 6,
+      "episodeRoman": "VI",
+      "releaseYear": 1983,
+      "category": "SAGA",
+      "era": "Galactic Civil War",
+      "synopsis": "The Rebels launch a final assault on the Empire and Luke seeks to redeem his father.",
+      "streaming": "Disney+",
+      "notes": "Director: Richard Marquand."
+    },
+    {
+      "title": "Star Wars: Episode VII - The Force Awakens",
+      "episodeNumber": 7,
+      "episodeRoman": "VII",
+      "releaseYear": 2015,
+      "category": "SAGA",
+      "era": "New Republic Era",
+      "synopsis": "Scavenger Rey crosses paths with Finn and Han Solo as the First Order rises.",
+      "streaming": "Disney+",
+      "notes": "Director: J.J. Abrams."
+    },
+    {
+      "title": "Star Wars: Episode VIII - The Last Jedi",
+      "episodeNumber": 8,
+      "episodeRoman": "VIII",
+      "releaseYear": 2017,
+      "category": "SAGA",
+      "era": "New Republic Era",
+      "synopsis": "The Resistance flees the First Order while Rey searches for guidance from Luke Skywalker.",
+      "streaming": "Disney+",
+      "notes": "Director: Rian Johnson."
+    },
+    {
+      "title": "Star Wars: Episode IX - The Rise of Skywalker",
+      "episodeNumber": 9,
+      "episodeRoman": "IX",
+      "releaseYear": 2019,
+      "category": "SAGA",
+      "era": "New Republic Era",
+      "synopsis": "The Resistance faces a resurgent Emperor Palpatine as Rey confronts her destiny.",
+      "streaming": "Disney+",
+      "notes": "Director: J.J. Abrams."
+    },
+    {
+      "title": "Rogue One: A Star Wars Story",
+      "releaseYear": 2016,
+      "category": "ANTHOLOGY",
+      "era": "Galactic Civil War",
+      "synopsis": "Jyn Erso leads a daring mission to steal the Death Star plans for the Rebel Alliance.",
+      "streaming": "Disney+",
+      "notes": "Director: Gareth Edwards."
+    },
+    {
+      "title": "Solo: A Star Wars Story",
+      "releaseYear": 2018,
+      "category": "ANTHOLOGY",
+      "era": "Age of the Empire",
+      "synopsis": "Young Han Solo meets Chewbacca and Lando Calrissian during a high-stakes heist.",
+      "streaming": "Disney+",
+      "notes": "Director: Ron Howard."
+    },
+    {
+      "title": "Star Wars: The Clone Wars",
+      "releaseYear": 2008,
+      "category": "ANIMATED_FEATURE",
+      "era": "Clone Wars",
+      "synopsis": "Anakin Skywalker and his new Padawan Ahsoka Tano race to rescue Jabba the Hutt's son.",
+      "streaming": "Disney+",
+      "notes": "Feature length pilot for the animated series."
+    },
+    {
+      "title": "Caravan of Courage: An Ewok Adventure",
+      "releaseYear": 1984,
+      "category": "TV_FILM",
+      "era": "Age of the Empire",
+      "synopsis": "Stranded siblings Mace and Cindel Towani join the Ewoks to find their parents on Endor.",
+      "streaming": "Disney+",
+      "notes": "Made for television film released as an ABC special."
+    },
+    {
+      "title": "Ewoks: The Battle for Endor",
+      "releaseYear": 1985,
+      "category": "TV_FILM",
+      "era": "Age of the Empire",
+      "synopsis": "Cindel Towani and Wicket fight marauders threatening the Ewok village.",
+      "streaming": "Disney+",
+      "notes": "Sequel to Caravan of Courage."
+    },
+    {
+      "title": "The Star Wars Holiday Special",
+      "releaseYear": 1978,
+      "category": "TV_FILM",
+      "era": "Galactic Civil War",
+      "synopsis": "Han Solo and Chewbacca attempt to reach Kashyyyk in time for Life Day.",
+      "streaming": "Not officially available",
+      "notes": "Variety special featuring the original trilogy cast."
+    },
+    {
+      "title": "LEGO Star Wars Holiday Special",
+      "releaseYear": 2020,
+      "category": "LEGO_SPECIAL",
+      "era": "New Republic Era",
+      "synopsis": "Rey travels through time to learn from Jedi across the saga.",
+      "streaming": "Disney+",
+      "notes": "Animated LEGO celebration of Life Day."
+    },
+    {
+      "title": "LEGO Star Wars Terrifying Tales",
+      "releaseYear": 2021,
+      "category": "LEGO_SPECIAL",
+      "era": "New Republic Era",
+      "synopsis": "Poe Dameron and BB-8 hear spooky stories inside Darth Vader's castle on Mustafar.",
+      "streaming": "Disney+",
+      "notes": "Halloween themed LEGO special."
+    },
+    {
+      "title": "LEGO Star Wars Summer Vacation",
+      "releaseYear": 2022,
+      "category": "LEGO_SPECIAL",
+      "era": "New Republic Era",
+      "synopsis": "Finn plans a holiday trip while Force ghosts remind the crew to celebrate every season.",
+      "streaming": "Disney+",
+      "notes": "Summer themed LEGO special."
+    }
+  ]
+}

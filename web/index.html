@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Star Wars Caller</title>
+    <!-- Beginner tip: styles.css defines the look and feel of this dashboard. -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+    <h1>The Star Wars Caller</h1>
+    <p>Browse the complete Star Wars film and television catalog.</p>
+</header>
+
+<main>
+    <!-- Control panel where users can search and filter. -->
+    <section id="controls">
+        <div class="control-group">
+            <label for="searchInput">Search</label>
+            <input type="search" id="searchInput" placeholder="Search by title, era, or synopsis">
+        </div>
+        <div class="control-group">
+            <label for="mediaType">Media Type</label>
+            <select id="mediaType">
+                <option value="movies" selected>Films</option>
+                <option value="series">Series</option>
+            </select>
+        </div>
+        <div class="control-group">
+            <label for="filterSelect">Filter</label>
+            <select id="filterSelect">
+                <option value="all" selected>All</option>
+            </select>
+        </div>
+        <div class="control-group">
+            <label for="sortSelect">Sort</label>
+            <select id="sortSelect">
+                <option value="yearAsc" selected>Year (Oldest to Newest)</option>
+                <option value="yearDesc">Year (Newest to Oldest)</option>
+                <option value="alpha">Alphabetical</option>
+            </select>
+        </div>
+        <button id="resetButton">Reset</button>
+    </section>
+
+    <!-- Cards containing either movies or series results render inside this container. -->
+    <section id="results"></section>
+</main>
+
+<footer>
+    <small>Data sourced from Lucasfilm releases. Built for fans learning Java and web dev.</small>
+</footer>
+
+<!-- app.js wires up events and renders the cards. -->
+<script src="app.js" type="module"></script>
+</body>
+</html>

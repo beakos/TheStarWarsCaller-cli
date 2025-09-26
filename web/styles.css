@@ -1,0 +1,191 @@
+/* Global theme colors inspired by the deep blues of hyperspace. */
+:root {
+    color-scheme: dark light;
+    --bg: #0d1b2a;
+    --panel: #1b263b;
+    --accent: #e0a82e;
+    --text: #e0e1dd;
+    --muted: #778da9;
+    --border: rgba(224, 225, 221, 0.2);
+}
+
+/* Reset box sizing so layout math stays predictable. */
+* {
+    box-sizing: border-box;
+}
+
+/* Base document styling. */
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Hero header reminiscent of holonet broadcasts. */
+header {
+    padding: 2rem 1.5rem 1rem;
+    text-align: center;
+    background: linear-gradient(135deg, rgba(27, 38, 59, 0.85), rgba(13, 27, 42, 0.95));
+    border-bottom: 1px solid var(--border);
+}
+
+header h1 {
+    margin: 0 0 0.5rem;
+    font-size: clamp(2rem, 3vw, 2.75rem);
+}
+
+header p {
+    margin: 0;
+    color: var(--muted);
+}
+
+/* Main container holds controls and results. */
+main {
+    flex: 1;
+    padding: 1.5rem;
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Responsive grid for the top control panel. */
+#controls {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: rgba(27, 38, 59, 0.65);
+    border: 1px solid var(--border);
+    border-radius: 1rem;
+    backdrop-filter: blur(6px);
+}
+
+.control-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+label {
+    font-size: 0.9rem;
+    color: var(--muted);
+}
+
+/* Inputs and selects share the same styling for consistency. */
+input[type="search"],
+select {
+    padding: 0.6rem;
+    border-radius: 0.6rem;
+    border: 1px solid var(--border);
+    background: rgba(13, 27, 42, 0.6);
+    color: var(--text);
+}
+
+/* Reset button has gold accent like C-3PO's plating. */
+button {
+    align-self: flex-end;
+    padding: 0.7rem 1.2rem;
+    border-radius: 0.6rem;
+    border: none;
+    background: var(--accent);
+    color: #1b263b;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover,
+button:focus-visible {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 18px rgba(224, 168, 46, 0.25);
+}
+
+/* Result grid showing media cards. */
+#results {
+    display: grid;
+    gap: 1.25rem;
+}
+
+/* Individual media card. */
+.card {
+    background: rgba(27, 38, 59, 0.8);
+    border: 1px solid var(--border);
+    border-radius: 1rem;
+    padding: 1rem 1.25rem;
+    display: grid;
+    gap: 0.75rem;
+}
+
+.card header {
+    background: none;
+    border: none;
+    padding: 0;
+    text-align: left;
+}
+
+.card header h2 {
+    margin: 0;
+    font-size: 1.25rem;
+}
+
+.card header span {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-top: 0.4rem;
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+/* Highlight used for category/format tags. */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    background: rgba(224, 168, 46, 0.2);
+    color: var(--accent);
+    border-radius: 999px;
+    padding: 0.2rem 0.7rem;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+.card p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+.card footer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem 1rem;
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #0a1623;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+}
+
+/* Mobile tweaks so the layout stays readable even on a datapad. */
+@media (max-width: 600px) {
+    main {
+        padding: 1rem;
+    }
+
+    #controls {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Easter egg: set background to #000000 and imagine you are in deep space. */
