@@ -1,4 +1,4 @@
-// app.js orchestrates the static frontend. Think of it as the crew running the Ghost's dashboard.
+// app.js orchestrates the static frontend holotable.
 const state = {
     mediaType: 'movies',
     search: '',
@@ -10,13 +10,16 @@ const state = {
     }
 };
 
-// Grab all DOM nodes we will interact with.
+// Collect references to DOM controls once.
 const searchInput = document.querySelector('#searchInput');
+const searchButton = document.querySelector('#searchButton');
 const mediaTypeSelect = document.querySelector('#mediaType');
 const filterSelect = document.querySelector('#filterSelect');
 const sortSelect = document.querySelector('#sortSelect');
 const resetButton = document.querySelector('#resetButton');
 const resultsContainer = document.querySelector('#results');
+
+const yearValue = (entry) => entry?.releaseYear ?? entry?.startYear ?? entry?.endYear ?? 0;
 
 // Utility: fetch JSON relative to this static site.
 const fetchJson = (path) => fetch(path).then((response) => {
@@ -33,8 +36,10 @@ async function bootstrap() {
             fetchJson('data/movies.json'),
             fetchJson('data/series.json')
         ]);
+
         state.data.movies = moviesJson.movies ?? [];
         state.data.series = seriesJson.series ?? [];
+
         populateFilters();
         render();
     } catch (error) {
@@ -45,8 +50,10 @@ async function bootstrap() {
 
 // Update filter dropdown based on the active media type.
 function populateFilters() {
-    const options = new Map();
-    options.set('all', 'All');
+    const options = new Map([
+        ['all', 'All']
+    ]);
+
     if (state.mediaType === 'movies') {
         const categories = new Set();
         const eras = new Set();
@@ -82,6 +89,7 @@ function populateFilters() {
             options.set(`era:${era}`, `Era - ${era}`);
         });
     }
+
     filterSelect.innerHTML = '';
     for (const [value, label] of options.entries()) {
         const option = document.createElement('option');
@@ -89,17 +97,49 @@ function populateFilters() {
         option.textContent = label;
         filterSelect.appendChild(option);
     }
-    filterSelect.value = state.filter;
+
+    const selectedValue = options.has(state.filter) ? state.filter : 'all';
+    filterSelect.value = selectedValue;
+    state.filter = selectedValue;
 }
 
 // Converts SNAKE_CASE into "Title Case" for nicer display.
 function humanise(value) {
-    return value.replace(/_/g, ' ').replace(/\b\w/g, (char) => char.toUpperCase());
+    return value
+        .replace(/_/g, ' ')
+        .replace(/\b\w/g, (char) => char.toUpperCase());
+}
+
+function formatSeriesYears(item) {
+    const start = item.startYear ?? item.releaseYear;
+    const end = item.endYear;
+    if (!start && !end) {
+        return 'TBA';
+    }
+    if (start && end && start !== end) {
+        return `${start}&nbsp;&ndash;&nbsp;${end}`;
+    }
+    return start ?? end ?? 'TBA';
+}
+
+function getPrimaryBadge(item) {
+    if (state.mediaType === 'movies') {
+        return humanise(item.category ?? 'Film');
+    }
+    return humanise(item.format ?? 'Series');
+}
+
+function getYearLabel(item) {
+    if (state.mediaType === 'movies') {
+        return item.releaseYear ?? 'TBA';
+    }
+    return formatSeriesYears(item);
 }
 
 // Apply search and filter rules to the current collection.
 function applyFilters(collection) {
     let filtered = collection;
+
     if (state.search) {
         const query = state.search.toLowerCase();
         filtered = filtered.filter((item) => {
@@ -107,6 +147,7 @@ function applyFilters(collection) {
             return fields.some((field) => field && field.toLowerCase().includes(query));
         });
     }
+
     if (state.filter !== 'all') {
         const [type, value] = state.filter.split(':');
         filtered = filtered.filter((item) => {
@@ -114,24 +155,30 @@ function applyFilters(collection) {
             return candidate && String(candidate).toLowerCase() === value.toLowerCase();
         });
     }
+
     return applySort(filtered);
 }
 
 // Sort the filtered data according to the UI selection.
 function applySort(collection) {
     const sorted = [...collection];
+
     switch (state.sort) {
-        case 'yearDesc':
-            sorted.sort((a, b) => (b.releaseYear ?? b.startYear) - (a.releaseYear ?? a.startYear));
+        case 'yearDesc': {
+            sorted.sort((a, b) => yearValue(b) - yearValue(a));
             break;
-        case 'alpha':
+        }
+        case 'alpha': {
             sorted.sort((a, b) => a.title.localeCompare(b.title));
             break;
+        }
         case 'yearAsc':
-        default:
-            sorted.sort((a, b) => (a.releaseYear ?? a.startYear) - (b.releaseYear ?? b.startYear));
+        default: {
+            sorted.sort((a, b) => yearValue(a) - yearValue(b));
             break;
+        }
     }
+
     return sorted;
 }
 
@@ -139,10 +186,12 @@ function applySort(collection) {
 function render() {
     const collection = state.mediaType === 'movies' ? state.data.movies : state.data.series;
     const filtered = applyFilters(collection);
+
     if (!filtered.length) {
         resultsContainer.innerHTML = '<p class="empty">No results match your query.</p>';
         return;
     }
+
     const fragment = document.createDocumentFragment();
     filtered.forEach((item) => {
         const card = document.createElement('article');
@@ -156,39 +205,51 @@ function render() {
 
 // Generate the inner HTML for a single movie or series card.
 function createCardMarkup(item) {
-    const year = item.releaseYear ?? item.startYear;
-    const badge = state.mediaType === 'movies' ? humanise(item.category ?? 'Film') : humanise(item.format ?? 'Series');
+    const yearLabel = getYearLabel(item);
+    const primaryBadge = getPrimaryBadge(item);
     const timeline = item.era ? `<span class="badge">${item.era}</span>` : '';
-    const notes = item.notes ? `<span>${item.notes}</span>` : '';
-    const streaming = item.streaming ? `<span>Available on ${item.streaming}</span>` : '';
     const subtitle = state.mediaType === 'movies' && item.episodeNumber
         ? `Episode ${item.episodeRoman ?? item.episodeNumber}`
-        : '';
+        : state.mediaType === 'series' && item.seasons
+            ? `${item.seasons} Season${item.seasons > 1 ? 's' : ''}`
+            : '';
+
+    const infoBits = [item.notes, item.streaming ? `Available on ${item.streaming}` : '']
+        .filter(Boolean)
+        .map((text) => `<span>${text}</span>`)
+        .join('<span aria-hidden="true" class="chip-divider">&bull;</span>');
 
     return `
 <header>
     <h2>${item.title}</h2>
-    <span>${year}${subtitle ? ` - ${subtitle}` : ''}</span>
+    <span>${yearLabel}${subtitle ? `&nbsp;&mdash;&nbsp;${subtitle}` : ''}</span>
 </header>
 <div>
-    <span class="badge">${badge}</span>
+    <span class="badge">${primaryBadge}</span>
     ${timeline}
 </div>
-<p>${item.synopsis ?? 'Synopsis coming soon.'}</p>
+<p>${item.synopsis ?? 'Synopsis coming soon from the Jedi Archives.'}</p>
 <footer>
-    ${notes}
-    ${streaming}
+    ${infoBits || '<span>Holonet intel pending.</span>'}
 </footer>
 `;
 }
 
-// Wire up real-time search.
-searchInput.addEventListener('input', (event) => {
-    state.search = event.target.value.trim();
+function performSearch() {
+    state.search = searchInput.value.trim();
     render();
+}
+
+// Wire up event handlers for the control panel.
+searchInput.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') {
+        event.preventDefault();
+        performSearch();
+    }
 });
 
-// Switching between films and series resets filter options.
+searchButton.addEventListener('click', performSearch);
+
 mediaTypeSelect.addEventListener('change', (event) => {
     state.mediaType = event.target.value;
     state.filter = 'all';
@@ -196,29 +257,30 @@ mediaTypeSelect.addEventListener('change', (event) => {
     render();
 });
 
-// Update filter state and re-render.
 filterSelect.addEventListener('change', (event) => {
     state.filter = event.target.value;
     render();
 });
 
-// Update sort state and re-render.
 sortSelect.addEventListener('change', (event) => {
     state.sort = event.target.value;
     render();
 });
 
-// Reset everything back to defaults.
 resetButton.addEventListener('click', () => {
+    state.mediaType = 'movies';
     state.search = '';
     state.filter = 'all';
     state.sort = 'yearAsc';
+
+    mediaTypeSelect.value = 'movies';
     searchInput.value = '';
-    filterSelect.value = 'all';
     sortSelect.value = 'yearAsc';
+
+    populateFilters();
     render();
 });
 
 bootstrap();
 
-// Easter egg: if you shout "For Mandalore!" while clicking reset, nothing special happens... yet.
+// Easter egg: say "For Mandalore!" while clicking search and imagine neon beskar sparks.

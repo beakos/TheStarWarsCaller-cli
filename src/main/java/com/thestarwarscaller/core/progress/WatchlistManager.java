@@ -1,4 +1,4 @@
-﻿package com.thestarwarscaller.core.progress;
+package com.thestarwarscaller.core.progress;
 
 import com.thestarwarscaller.core.JsonParser;
 import com.thestarwarscaller.core.JsonWriter;

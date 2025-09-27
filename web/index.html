@@ -41,11 +41,17 @@
                 <option value="alpha">Alphabetical</option>
             </select>
         </div>
-        <button id="resetButton">Reset</button>
+        <div class="control-group action-buttons">
+            <label class="visually-hidden" for="searchButton">Controls</label>
+            <div class="button-row">
+                <button id="searchButton" type="button">Search</button>
+                <button id="resetButton" class="button-secondary" type="button">Reset</button>
+            </div>
+        </div>
     </section>
 
     <!-- Cards containing either movies or series results render inside this container. -->
-    <section id="results"></section>
+    <section id="results" aria-live="polite"></section>
 </main>
 
 <footer>

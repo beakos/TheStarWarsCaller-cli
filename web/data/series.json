@@ -1,0 +1,254 @@
+{
+  "series": [
+    {
+      "title": "The Mandalorian",
+      "startYear": 2019,
+      "format": "LIVE_ACTION",
+      "era": "New Republic Era",
+      "synopsis": "Bounty hunter Din Djarin protects Grogu while navigating the politics of the Outer Rim.",
+      "streaming": "Disney+",
+      "notes": "Created by Jon Favreau."
+    },
+    {
+      "title": "The Book of Boba Fett",
+      "startYear": 2021,
+      "endYear": 2022,
+      "format": "LIVE_ACTION",
+      "era": "New Republic Era",
+      "synopsis": "Boba Fett and Fennec Shand claim Jabba the Hutt's former territory on Tatooine.",
+      "streaming": "Disney+",
+      "notes": "Spin off of The Mandalorian."
+    },
+    {
+      "title": "Obi-Wan Kenobi",
+      "startYear": 2022,
+      "endYear": 2022,
+      "format": "LIVE_ACTION",
+      "era": "Age of the Empire",
+      "synopsis": "Obi-Wan watches over young Luke Skywalker and confronts Darth Vader ten years after Order 66.",
+      "streaming": "Disney+",
+      "notes": "Limited series starring Ewan McGregor."
+    },
+    {
+      "title": "Andor",
+      "startYear": 2022,
+      "format": "LIVE_ACTION",
+      "era": "Age of the Empire",
+      "synopsis": "Cassian Andor becomes a spy for the Rebel Alliance during the rise of the Empire.",
+      "streaming": "Disney+",
+      "notes": "Created by Tony Gilroy with a planned two season arc."
+    },
+    {
+      "title": "Ahsoka",
+      "startYear": 2023,
+      "format": "LIVE_ACTION",
+      "era": "New Republic Era",
+      "synopsis": "Ahsoka Tano searches for Ezra Bridger and the returning threat of Grand Admiral Thrawn.",
+      "streaming": "Disney+",
+      "notes": "Continuation of Star Wars Rebels story threads."
+    },
+    {
+      "title": "Skeleton Crew",
+      "startYear": 2024,
+      "format": "LIVE_ACTION",
+      "era": "New Republic Era",
+      "synopsis": "A group of lost youths try to find their way home in the aftermath of the Galactic Civil War.",
+      "streaming": "Disney+",
+      "notes": "Upcoming coming of age adventure created by Jon Watts and Christopher Ford."
+    },
+    {
+      "title": "The Acolyte",
+      "startYear": 2024,
+      "format": "LIVE_ACTION",
+      "era": "High Republic",
+      "synopsis": "A former Padawan reunites with her Jedi Master to investigate dark side crimes at the end of the High Republic.",
+      "streaming": "Disney+",
+      "notes": "Live action mystery thriller created by Leslye Headland."
+    },
+    {
+      "title": "Star Wars: The Clone Wars",
+      "startYear": 2008,
+      "endYear": 2020,
+      "format": "ANIMATED",
+      "era": "Clone Wars",
+      "synopsis": "Anakin Skywalker, Obi-Wan Kenobi, and Ahsoka Tano lead clone troopers across a galaxy spanning conflict.",
+      "streaming": "Disney+",
+      "notes": "Seven season animated epic from Lucasfilm Animation."
+    },
+    {
+      "title": "Star Wars Rebels",
+      "startYear": 2014,
+      "endYear": 2018,
+      "format": "ANIMATED",
+      "era": "Age of the Empire",
+      "synopsis": "The crew of the Ghost sparks rebellion on Lothal and beyond.",
+      "streaming": "Disney+",
+      "notes": "Created by Dave Filoni, Simon Kinberg, and Carrie Beck."
+    },
+    {
+      "title": "Star Wars Resistance",
+      "startYear": 2018,
+      "endYear": 2020,
+      "format": "ANIMATED",
+      "era": "New Republic Era",
+      "synopsis": "Pilot Kazuda Xiono spies on the First Order in the days leading into The Force Awakens.",
+      "streaming": "Disney+",
+      "notes": "Animated series from Lucasfilm Animation."
+    },
+    {
+      "title": "Star Wars: The Bad Batch",
+      "startYear": 2021,
+      "endYear": 2024,
+      "format": "ANIMATED",
+      "era": "Age of the Empire",
+      "synopsis": "Clone Force 99 searches for their purpose after the fall of the Republic.",
+      "streaming": "Disney+",
+      "notes": "Spin off of The Clone Wars."
+    },
+    {
+      "title": "Young Jedi Adventures",
+      "startYear": 2023,
+      "format": "ANIMATED",
+      "era": "High Republic",
+      "synopsis": "Younglings train with Master Yoda and learn the ways of the Force.",
+      "streaming": "Disney+",
+      "notes": "Animated series aimed at younger viewers."
+    },
+    {
+      "title": "Star Wars Forces of Destiny",
+      "startYear": 2017,
+      "endYear": 2018,
+      "format": "ANIMATED",
+      "era": "Multiple Eras",
+      "synopsis": "Short adventures celebrate the heroines and heroes of every era.",
+      "streaming": "Disney+ / YouTube",
+      "notes": "Animated micro shorts from Lucasfilm Animation."
+    },
+    {
+      "title": "Star Wars Galaxy of Adventures",
+      "startYear": 2018,
+      "endYear": 2020,
+      "format": "ANIMATED",
+      "era": "Multiple Eras",
+      "synopsis": "Stylized animated shorts reinterpret iconic scenes from the saga.",
+      "streaming": "YouTube / Disney+",
+      "notes": "Targets younger fans with fast paced retellings."
+    },
+    {
+      "title": "Star Wars: Droids",
+      "startYear": 1985,
+      "endYear": 1986,
+      "format": "ANIMATED",
+      "era": "Age of the Empire",
+      "synopsis": "C-3PO and R2-D2 embark on episodic adventures with new masters.",
+      "streaming": "Disney+ (Vintage)",
+      "notes": "Animated series from Nelvana."
+    },
+    {
+      "title": "Star Wars: Ewoks",
+      "startYear": 1985,
+      "endYear": 1986,
+      "format": "ANIMATED",
+      "era": "Age of the Empire",
+      "synopsis": "Wicket and his Ewok friends defend Bright Tree Village from threats on Endor.",
+      "streaming": "Disney+ (Vintage)",
+      "notes": "Animated companion to the Ewok films."
+    },
+    {
+      "title": "Star Wars: Clone Wars",
+      "startYear": 2003,
+      "endYear": 2005,
+      "format": "MICRO_SERIES",
+      "era": "Clone Wars",
+      "synopsis": "Genndy Tartakovsky's serialized shorts bridge Episodes II and III.",
+      "streaming": "Disney+ (Vintage)",
+      "notes": "Hand drawn micro series originally on Cartoon Network."
+    },
+    {
+      "title": "LEGO Star Wars: The Freemaker Adventures",
+      "startYear": 2016,
+      "endYear": 2017,
+      "format": "LEGO",
+      "era": "Galactic Civil War",
+      "synopsis": "The Freemaker siblings scavenge the galaxy and cross paths with classic heroes and villains.",
+      "streaming": "Disney+",
+      "notes": "LEGO animated series produced by Wil Film and Lucasfilm Animation."
+    },
+    {
+      "title": "LEGO Star Wars: Droid Tales",
+      "startYear": 2015,
+      "endYear": 2015,
+      "format": "LEGO",
+      "era": "Multiple Eras",
+      "synopsis": "C-3PO recounts the entire saga with trademark LEGO humor.",
+      "streaming": "Disney+",
+      "notes": "Five episode limited series."
+    },
+    {
+      "title": "LEGO Star Wars: The Resistance Rises",
+      "startYear": 2016,
+      "endYear": 2016,
+      "format": "LEGO",
+      "era": "New Republic Era",
+      "synopsis": "Shorts highlight the heroes and villains around The Force Awakens.",
+      "streaming": "Disney+",
+      "notes": "Collection of animated LEGO shorts."
+    },
+    {
+      "title": "LEGO Star Wars: All-Stars",
+      "startYear": 2018,
+      "endYear": 2018,
+      "format": "LEGO",
+      "era": "Multiple Eras",
+      "synopsis": "Anthology of shorts and episodes featuring characters from across the timeline.",
+      "streaming": "Disney+",
+      "notes": "Mix of regular episodes and micro shorts."
+    },
+    {
+      "title": "Star Wars: Visions",
+      "startYear": 2021,
+      "format": "ANTHOLOGY",
+      "era": "Non-canon anthology",
+      "synopsis": "Animation studios from around the world deliver original Star Wars stories.",
+      "streaming": "Disney+",
+      "notes": "Each volume features standalone shorts."
+    },
+    {
+      "title": "Tales of the Jedi",
+      "startYear": 2022,
+      "format": "ANTHOLOGY",
+      "era": "Fall of the Republic",
+      "synopsis": "Animated shorts explore formative moments for Jedi like Ahsoka Tano and Count Dooku.",
+      "streaming": "Disney+",
+      "notes": "Anthology from Lucasfilm Animation."
+    },
+    {
+      "title": "Tales of the Empire",
+      "startYear": 2024,
+      "format": "ANTHOLOGY",
+      "era": "Age of the Empire",
+      "synopsis": "Anthology companion focusing on characters tied to the dark side and the Empire.",
+      "streaming": "Disney+",
+      "notes": "Spiritual follow up to Tales of the Jedi."
+    },
+    {
+      "title": "Disney Gallery: The Mandalorian",
+      "startYear": 2020,
+      "format": "DOCUMENTARY",
+      "era": "Behind the scenes",
+      "synopsis": "Documentary series exploring the making of The Mandalorian and other live action projects.",
+      "streaming": "Disney+",
+      "notes": "Docuseries hosted by Jon Favreau featuring round table discussions."
+    },
+    {
+      "title": "Light & Magic",
+      "startYear": 2022,
+      "endYear": 2022,
+      "format": "DOCUMENTARY",
+      "era": "Behind the scenes",
+      "synopsis": "Documentary chronicles the history of Industrial Light & Magic and groundbreaking visual effects.",
+      "streaming": "Disney+",
+      "notes": "Directed by Lawrence Kasdan."
+    }
+  ]
+}
